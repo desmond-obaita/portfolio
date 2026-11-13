@@ -3,7 +3,7 @@
 Source for my personal portfolio: **https://desmondchess.github.io**
 
 I'm a chemical engineer and Ph.D. candidate at Oregon State University working on
-process modeling, microscale process intensification, and pilot-scale commissioning.
+process modeling and microscale process intensification.
 This site highlights my research, my internship at Duranium, and my interactive
 two-phase microflow simulator website.
 
