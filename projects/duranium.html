@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modeling and commissioning a pilot fluidized‑bed reactor — Desmond Obaita</title>
+  <meta name="description" content="Desmond Obaita's summer 2026 internship at Duranium: a COMSOL fluidized-bed carbochlorination model and pilot-unit commissioning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Schibsted+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Desmond Obaita <span>/ ChemE</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="../index.html#about">Who I am</a>
+      <a href="../index.html#work">Projects</a>
+      <a href="../index.html#strengths">Strengths</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="resume" href="../assets/Desmond_Obaita_Resume.pdf">Résumé</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="case-hero">
+  <div class="wrap">
+    <a class="back" href="../index.html#work">← All projects</a>
+    <div class="tags" style="margin-top:1rem"><span class="tag or">Fluidization</span><span class="tag ">Reaction kinetics</span><span class="tag ">Instrumentation</span><span class="tag aq">Commissioning</span></div>
+    <h1>Modeling and commissioning a pilot fluidized‑bed reactor</h1>
+    <p class="lede">Over one summer I built a reactor model the software didn’t have a template for, and spent the rest of my time helping bring real pilot units to life.</p>
+    <dl class="facts"><div><dt>Role</dt><dd>Process Modeling Engineer Intern</dd></div><div><dt>Where</dt><dd>Duranium</dd></div><div><dt>When</dt><dd>Jun – Aug 2026</dd></div><div><dt>Tools</dt><dd>COMSOL, Excel, P&amp;IDs</dd></div></dl>
+  </div>
+</section>
+<section class="case-body">
+  <div class="wrap">
+    <aside aria-label="On this page"><a href="#problem">The problem</a><a href="#cold">Phase 1: the cold model</a><a href="#hot">Phase 2: the hot model</a><a href="#plant">On the plant floor</a><a href="#learned">What I learned</a></aside>
+    <article>
+<h2 id="problem">The problem</h2>
+<p>Duranium’s process includes a fluidized‑bed reactor where magnesium oxide particles react with chlorine and carbon monoxide:</p>
+<div class="pullout"><p>MgO(s) + Cl₂(g) + CO(g) → MgCl₂(l) + CO₂(g)</p></div>
+<p>The team needed a computational model that could predict conversion and bed behavior, so fewer physical experiments would be needed as the process scales. The catch: COMSOL has no built‑in way to combine fluidized‑bed hydrodynamics with shrinking‑core particle kinetics, and the reaction involves solid, liquid, and gas at once.</p>
+<h2 id="cold">Phase 1: the cold model</h2>
+<p>I started with a non‑reacting model to make sure the hydrodynamics were right before adding chemistry. Using COMSOL’s Euler‑Euler interface in 2D, I simulated the bed fluidizing and cross‑checked every key result against hand calculations.</p>
+<figure><img src="../assets/img/duranium-cold-model.png" alt="Four snapshots of solid volume fraction and gas velocity, showing the bed expanding and bubbling."><figcaption>Simulated fluidization at 0.2, 0.5, 0.8, and 1.0 s. In each pair, the left panel is solid volume fraction and the right is gas velocity; the dashed line is the distributor plate.</figcaption></figure>
+<ul>
+<li>Calculated minimum fluidization velocity with the Ergun equation (0.115 m/s) and cross‑checked it with the Wen &amp; Yu correlation in a spreadsheet tool I built.</li>
+<li>Simulated pressure drop settled near 2,000 Pa, close to the theoretical bed‑weight value of about 2,230 Pa.</li>
+<li>Ran a particle‑size study at 54, 200, and 500 µm, tracked bed expansion and particle loss through the distributor, and confirmed solid mass was conserved throughout.</li>
+</ul>
+<figure><img src="../assets/img/duranium-pressure-drop.png" alt="Line chart: pressure drop falls from about 10,000 Pa to about 2,200 Pa within 0.1 s and then levels off near 2,000 Pa."><figcaption>Pressure drop across the bed falls sharply as the packed bed begins to fluidize, then plateaus near the theoretical value.</figcaption></figure>
+<h2 id="hot">Phase 2: the hot model</h2>
+<p>With the hydrodynamics validated, I built the reacting model from first principles. I derived the reaction rate and mass source terms by hand, following the fluidized‑bed design method in Kunii and Levenspiel, and reformulated the conversion balance for a batch, spatially resolved bed. Then I implemented it as a coupled system: Euler‑Euler flow, Transport of Concentrated Species, Heat Transfer in Fluids, and Domain ODEs for particle conversion.</p>
+<figure><img src="../assets/img/duranium-hot-model.png" alt="Side-by-side field plots of CO2, CO, solid fraction, temperature, Cl2 and conversion in the reacting bed."><figcaption>Preliminary hot‑model run showing species, solid fraction, temperature, and conversion fields developing together in the bed.</figcaption></figure>
+<p>Kinetics were calibrated against published data (activation energy of 49 kJ/mol), and the model predicts about 40% solids conversion, giving the team a baseline for comparing operating conditions. I also restructured the solver to fix convergence problems, and documented where the model should go next, including a full three‑phase treatment once experimental data are available.</p>
+<h2 id="plant">On the plant floor</h2>
+<ul>
+<li>Integrated 13 pressure, 8 temperature, and 19 flow instruments across three pilot process units, working with controls engineers.</li>
+<li>Installed and calibrated two chlorine analyzers on a gas scrubber.</li>
+<li>Led functional testing of six process lines and equipment assemblies, finding and fixing piping, instrumentation, and equipment issues before startup.</li>
+<li>Leak‑tested piping systems and supported fluidized‑bed experiments with the research engineers.</li>
+</ul>
+<h2 id="learned">What I learned</h2>
+<p>A model is only useful if the people running the plant trust it. Spending half my time with the hardware made me a better modeler: I knew which numbers the team would actually check, and I built the model to be re‑parameterized quickly when their data arrived.</p>
+    </article>
+  </div>
+</section>
+<section class="next-case">
+  <div class="wrap">
+    <p class="meta" style="margin:0 0 .3rem">Next project</p>
+    <a href="simulator.html">Two‑phase microflow simulator</a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><div class="wrap">© 2026 Desmond Obaita. Built by hand and hosted on GitHub Pages.</div></footer>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

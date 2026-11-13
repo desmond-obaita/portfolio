@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desmond Obaita — Chemical Engineer</title>
+  <meta name="description" content="Desmond Obaita is a chemical engineer who models, builds, and commissions process equipment, from microscale separators to pilot-scale fluidized beds.">
+  <meta property="og:title" content="Desmond Obaita — Chemical Engineer">
+  <meta property="og:description" content="Process modeling, microscale process intensification, and hands-on commissioning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Schibsted+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Desmond Obaita <span>/ ChemE</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#about">Who I am</a>
+      <a href="#do">What I do</a>
+      <a href="#work">Projects</a>
+      <a href="#strengths">Strengths</a>
+      <a href="#direction">Direction</a>
+      <a href="#contact">Contact</a>
+      <!-- EDIT: drop a recruiter-friendly resume PDF into assets/ with this exact name -->
+      <a class="resume" href="assets/Desmond_Obaita_Resume.pdf">Résumé</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>I’m Desmond. I make fluids go where they should.</h1>
+        <p class="lede">I’m a chemical engineer who builds process models from first principles, then takes them off the screen and into hardware: 3D‑printed separators, microchannel reactors, and pilot plants.</p>
+        <p class="sub">Ph.D. candidate at Oregon State University, finishing in March 2027. I’m looking for process engineering roles where modeling and the plant floor meet.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#work">See my projects</a>
+          <!-- EDIT: replace with your live simulator URL -->
+          <a class="btn" href="https://YOUR-GITHUB-USERNAME.github.io/two-phase-simulator/">Try my two‑phase simulator</a>
+        </div>
+      </div>
+      <figure class="channel">
+        <canvas id="channel" role="img" aria-label="Animated sketch of a pin-plate separator: mixed amber and blue droplets enter on the left. Amber organic droplets drift toward the wide gaps at the top outlet, blue aqueous droplets toward the narrow gaps at the bottom outlet."></canvas>
+        <figcaption>
+          <span><i class="dot or"></i>Organic phase</span>
+          <span><i class="dot aq"></i>Aqueous phase</span>
+          <span>A sketch of my dissertation idea: let geometry do the separating.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- WHO I AM -->
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="about">
+        <!-- EDIT: replace this div with <img class="portrait" src="assets/img/headshot.jpg" alt="Desmond Obaita"> -->
+        <div class="portrait">Your headshot goes here<br>(assets/img/headshot.jpg)</div>
+        <div>
+          <h2>Who I am</h2>
+          <p style="margin-top:1.2rem">I studied chemical engineering at the University of Benin in Nigeria, and that path has since carried me to Corvallis, Oregon, where I’m completing a Ph.D. and an M.Eng. at Oregon State. Along the way I’ve learned that the most interesting problems sit between the equations and the equipment.</p>
+          <p>I’m the person who will happily spend a week chasing down why a simulation won’t converge, checking the interface thickness, then the mesh, then the inlet velocity, then the contact angle, until one parameter finally gives. I enjoy that kind of methodical detective work, and I enjoy explaining what I found just as much.</p>
+
+          <div class="values">
+            <div>
+              <h3>First principles</h3>
+              <p>I want to know why a result is right, not only that it matches. Models I build start from mass, momentum, and energy balances.</p>
+            </div>
+            <div>
+              <h3>Hands on the hardware</h3>
+              <p>A model earns trust when it meets a real device. I design, print, wire, leak‑test, and commission the things I model.</p>
+            </div>
+            <div>
+              <h3>Show up for people</h3>
+              <p>Representing graduate students, judging student posters, volunteering at the South Corvallis Food Bank. Community keeps me grounded.</p>
+            </div>
+          </div>
+
+          <div class="chess">
+            <div class="board" aria-hidden="true"></div>
+            <p><strong style="font-family:var(--sans)">Off the clock, I play chess.</strong> It’s the same muscle I use at work: read the position, think a few moves ahead, and stay calm when the plan has to change.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I DO -->
+  <section class="block" id="do">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What I do</h2>
+        <p>Three kinds of work, usually in the same week.</p>
+      </div>
+      <div class="practice">
+        <div>
+          <h3>Model the process</h3>
+          <p>Multiphysics models of reactors and separators: flow, heat transfer, species transport, and kinetics, calibrated against data so they can predict, not just describe.</p>
+          <p class="tools">COMSOL Multiphysics, MATLAB/Simulink, Python, Aspen HYSYS, CFD</p>
+        </div>
+        <div>
+          <h3>Build the device</h3>
+          <p>Turning process requirements into equipment you can hold: CAD, 3D printing, and rapid iteration through more than 15 lab‑scale separator prototypes.</p>
+          <p class="tools">Fusion, SolidWorks, Siemens NX, FFF 3D printing</p>
+        </div>
+        <div>
+          <h3>Bring it online</h3>
+          <p>Instrumentation, functional testing, leak testing, and commissioning alongside controls and research engineers at pilot scale.</p>
+          <p class="tools">PFD/P&amp;ID, instrumentation, leak testing, troubleshooting</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Selected projects</h2>
+        <p>Each one links to a short case study: the problem, what I did, and what came of it.</p>
+      </div>
+      <div class="work-list">
+
+        <a class="work-item" href="projects/thesis.html">
+          <div class="thumb">
+            <svg viewBox="0 0 400 300" aria-hidden="true">
+              <rect width="400" height="300" fill="#e8eef0"/>
+              <rect x="30" y="40" width="340" height="220" rx="14" fill="#fbfcfc" stroke="#142536" stroke-width="2"/>
+              <g fill="#cfd9dd">
+                <circle cx="80" cy="235" r="15"/><circle cx="130" cy="235" r="15"/><circle cx="180" cy="235" r="15"/><circle cx="230" cy="235" r="15"/><circle cx="280" cy="235" r="15"/><circle cx="330" cy="235" r="15"/>
+                <circle cx="105" cy="190" r="12"/><circle cx="155" cy="190" r="12"/><circle cx="205" cy="190" r="12"/><circle cx="255" cy="190" r="12"/><circle cx="305" cy="190" r="12"/>
+                <circle cx="80" cy="145" r="9"/><circle cx="130" cy="145" r="9"/><circle cx="180" cy="145" r="9"/><circle cx="230" cy="145" r="9"/><circle cx="280" cy="145" r="9"/><circle cx="330" cy="145" r="9"/>
+                <circle cx="105" cy="100" r="6"/><circle cx="155" cy="100" r="6"/><circle cx="205" cy="100" r="6"/><circle cx="255" cy="100" r="6"/><circle cx="305" cy="100" r="6"/>
+              </g>
+              <circle cx="120" cy="125" r="9" fill="#d99a2b"/><circle cx="215" cy="80" r="8" fill="#d99a2b"/><circle cx="300" cy="70" r="9" fill="#d99a2b"/>
+              <circle cx="140" cy="212" r="7" fill="#2c6a9e"/><circle cx="250" cy="250" r="7" fill="#2c6a9e"/><circle cx="330" cy="255" r="6" fill="#2c6a9e"/>
+            </svg>
+          </div>
+          <div>
+            <span class="meta">Doctoral research · Oregon State University · 2023 – present</span>
+            <h3>Separating liquids with geometry, not membranes</h3>
+            <p>My dissertation asks whether carefully designed gradients in channel shape and surface wettability can pull two liquids apart on their own. I model it in COMSOL, print the devices, and test them on the bench, including a DOE‑funded lithium extraction project where a membrane‑less separator exceeded 95% separation efficiency.</p>
+            <div class="tags"><span class="tag aq">Process intensification</span><span class="tag">Two‑phase CFD</span><span class="tag">3D printing</span><span class="tag or">Lithium recovery</span></div>
+            <p class="read" style="margin-top:1rem">Read the case study</p>
+          </div>
+        </a>
+
+        <a class="work-item" href="projects/duranium.html">
+          <div class="thumb"><img src="assets/img/duranium-cold-model.png" alt="Four snapshots of simulated solid volume fraction and gas velocity in a fluidized bed, showing the bed expanding and bubbling over one second."></div>
+          <div>
+            <span class="meta">Internship · Duranium · Summer 2026</span>
+            <h3>Modeling and commissioning a pilot fluidized‑bed reactor</h3>
+            <p>As a process modeling engineer intern, I built a COMSOL model of a fluidized‑bed carbochlorination reactor from scratch, coupling hydrodynamics, heat transfer, species transport, and custom shrinking‑core kinetics. Outside the model, I helped wire, test, and commission three pilot process units.</p>
+            <div class="tags"><span class="tag or">Fluidization</span><span class="tag">Reaction kinetics</span><span class="tag">Instrumentation</span><span class="tag aq">Commissioning</span></div>
+            <p class="read" style="margin-top:1rem">Read the case study</p>
+          </div>
+        </a>
+
+        <a class="work-item" href="projects/simulator.html">
+          <div class="thumb">
+            <svg viewBox="0 0 400 300" aria-hidden="true">
+              <rect width="400" height="300" fill="#142536"/>
+              <rect x="40" y="110" width="320" height="80" rx="10" fill="none" stroke="#cfd9dd" stroke-width="2"/>
+              <rect x="40" y="110" width="320" height="80" rx="10" fill="#2c6a9e" opacity=".35"/>
+              <ellipse cx="110" cy="150" rx="34" ry="26" fill="#d99a2b"/>
+              <ellipse cx="215" cy="150" rx="26" ry="22" fill="#d99a2b"/>
+              <ellipse cx="298" cy="150" rx="18" ry="16" fill="#d99a2b"/>
+              <rect x="40" y="225" width="200" height="6" rx="3" fill="#4d5e6c"/><circle cx="150" cy="228" r="9" fill="#f5f8f8"/>
+              <rect x="40" y="250" width="200" height="6" rx="3" fill="#4d5e6c"/><circle cx="90" cy="253" r="9" fill="#f5f8f8"/>
+            </svg>
+          </div>
+          <div>
+            <span class="meta">Interactive tool · Web</span>
+            <h3>Two‑phase microflow simulator</h3>
+            <!-- EDIT: tighten this to match exactly what your simulator does -->
+            <p>A browser‑based simulator I built so anyone can explore how droplets behave in a microchannel. Change the inputs, watch the flow respond, and get a feel for the physics behind my research without installing anything.</p>
+            <div class="tags"><span class="tag aq">Interactive</span><span class="tag">JavaScript</span><span class="tag or">Science communication</span></div>
+            <p class="read" style="margin-top:1rem">Read the case study</p>
+          </div>
+        </a>
+
+        <a class="work-item" href="projects/alcohol-to-jet.html">
+          <div class="thumb">
+            <svg viewBox="0 0 400 300" aria-hidden="true">
+              <rect width="400" height="300" fill="#f4e3c0"/>
+              <g stroke="#142536" stroke-width="2" fill="#fbfcfc">
+                <rect x="60" y="60" width="280" height="180" rx="10"/>
+              </g>
+              <g stroke="#d99a2b" stroke-width="7" stroke-linecap="round">
+                <line x1="90" y1="90" x2="310" y2="90"/><line x1="90" y1="120" x2="310" y2="120"/><line x1="90" y1="150" x2="310" y2="150"/><line x1="90" y1="180" x2="310" y2="180"/><line x1="90" y1="210" x2="310" y2="210"/>
+              </g>
+              <g stroke="#142536" stroke-width="2"><line x1="20" y1="150" x2="60" y2="150"/><line x1="340" y1="150" x2="380" y2="150"/></g>
+            </svg>
+          </div>
+          <div>
+            <span class="meta">Research collaboration · ATAMI, PNNL &amp; LanzaTech</span>
+            <h3>Microchannel reactors for sustainable aviation fuel</h3>
+            <p>Ethanol to butene is a key step in turning renewable alcohol into jet fuel. I modeled additively manufactured microchannel reactors for that conversion, linking COMSOL to MATLAB in an automated calibration loop. The work is part of a 600× numbering‑up study now in review at <em>Nature Energy</em>.</p>
+            <div class="tags"><span class="tag or">Alcohol‑to‑jet</span><span class="tag">Reactor modeling</span><span class="tag aq">Optimization</span><span class="tag">Scale‑up</span></div>
+            <p class="read" style="margin-top:1rem">Read the case study</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STRENGTHS -->
+  <section class="block" id="strengths">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Strengths &amp; expertise</h2>
+        <p>Where I can help a team on day one.</p>
+      </div>
+      <div class="strengths">
+        <div>
+          <h3>Process modeling that holds up</h3>
+          <p>I build multiphysics models from the governing equations up, check them against hand calculations and data, and keep them parameterized so they’re easy to rerun when new results come in.</p>
+          <p class="skill-line">COMSOL Multiphysics · CFD · MATLAB/Simulink · Python · Aspen HYSYS · Excel VBA</p>
+        </div>
+        <div>
+          <h3>Plant‑floor readiness</h3>
+          <p>I’ve integrated pressure, temperature, and flow instruments, calibrated gas analyzers, run functional tests, and leak‑tested piping on pilot units.</p>
+          <p class="skill-line">PFD/P&amp;ID · Instrumentation · Commissioning · Leak testing · Troubleshooting</p>
+        </div>
+        <div>
+          <h3>Design you can build</h3>
+          <p>I move from a process requirement to a CAD part to a printed prototype, then test it and feed what I learn back into the design.</p>
+          <p class="skill-line">Fusion · SolidWorks · Siemens NX · Additive manufacturing</p>
+        </div>
+        <div>
+          <h3>Clear technical communication</h3>
+          <p>Quarterly reports for the DOE, presentations for sponsors, case write‑ups for teammates. I like making hard ideas easy to act on.</p>
+          <p class="skill-line">Technical writing · Statistical analysis · JMP · Cross‑functional collaboration</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b>&gt;95%</b><span>separation efficiency in a membrane‑less lithium separator</span></div>
+        <div class="stat"><b>40</b><span>instruments integrated across 3 pilot units at Duranium</span></div>
+        <div class="stat"><b>15+</b><span>separator prototypes designed, printed, and tested</span></div>
+        <div class="stat"><b>25+</b><span>bench experiments across three flow‑rate ranges</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section class="block" id="journey">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Journey</h2>
+        <p>How I got here.</p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <time>2019</time>
+          <h3>B.Eng. Chemical Engineering, University of Benin</h3>
+          <p>Published my first paper, a statistical optimization of bitter kola extract yield.</p>
+        </li>
+        <li>
+          <time>2023</time>
+          <h3>Graduate Research Assistant, ATAMI at Oregon State</h3>
+          <p>Joined Prof. Goran Jovanovic’s group working on microscale process intensification.</p>
+        </li>
+        <li>
+          <time>2024 – 2025</time>
+          <h3>Chemical Engineering Representative, Graduate Student Association</h3>
+          <p>Represented graduate students in department discussions and carried their feedback to program leadership.</p>
+        </li>
+        <li>
+          <time>Summer 2026</time>
+          <h3>Process Modeling Engineer Intern, Duranium</h3>
+          <p>Built a reacting fluidized‑bed model and helped commission pilot‑scale units.</p>
+        </li>
+        <li class="now">
+          <time>Dec 2026 · Mar 2027</time>
+          <h3>M.Eng. and Ph.D. in Chemical Engineering, Oregon State</h3>
+          <p>Now a Ph.D. candidate, wrapping up my dissertation on gradient‑driven microscale separation.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- DIRECTION -->
+  <section class="block" id="direction">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Direction &amp; goals</h2>
+        <p>Where I’m headed next.</p>
+      </div>
+      <div class="direction">
+        <div>
+          <p>I want to work as a process engineer on technology that is moving from the lab toward the plant: demonstration units, pilot scale‑up, and first‑of‑a‑kind facilities. That stage needs people who can build a credible model on Monday and stand next to the skid on Tuesday, and that’s the kind of engineer I’ve been training to be.</p>
+          <p>I’m especially drawn to energy transition and critical minerals work, from sustainable fuels to lithium and magnesium recovery, where better process design has an outsized effect.</p>
+        </div>
+        <div>
+          <h3 style="margin-bottom:1rem">In the next few years I want to</h3>
+          <ul>
+            <li>Own the process design of a unit from PFD through commissioning.</li>
+            <li>Use first‑principles models to cut the number of experiments a scale‑up needs.</li>
+            <li>Grow toward professional licensure and technical leadership.</li>
+            <li>Keep mentoring and explaining, so the next engineer has an easier start.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="block contact" id="contact">
+    <div class="wrap">
+      <h2>Let’s talk</h2>
+      <p style="margin-top:1rem">I’m open to full‑time process engineering roles starting in 2027. If you’re building something that has to work at scale, I’d love to hear about it.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:obaitadesmond12@gmail.com">Email me</a>
+        <!-- EDIT: replace with your LinkedIn URL -->
+        <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN/">LinkedIn</a>
+        <a class="btn" href="assets/Desmond_Obaita_Resume.pdf">Download résumé</a>
+      </div>
+      <p style="margin-top:1.5rem;font-family:var(--sans);font-size:.95rem">obaitadesmond12@gmail.com · Corvallis, Oregon</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">© 2026 Desmond Obaita. Built by hand and hosted on GitHub Pages.</div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
