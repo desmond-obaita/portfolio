@@ -263,3 +263,11 @@ section.block { padding: 5rem 0; border-top: 1px solid var(--line); }
   .case-body .wrap { grid-template-columns: 1fr; }
   .case-body aside { position: static; display: none; }
 }
+/* Photos */
+.channel img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+
+img.portrait {
+  padding: 0;                  /* removes the grey border left from the placeholder */
+  object-fit: cover;           /* fills the frame without stretching */
+  object-position: center top; /* keeps your face in view if it crops */
+}
