@@ -1,6 +1,6 @@
 # Desmond Obaita — Portfolio
 
-Source for my personal portfolio: **https://desmondchess.github.io**
+Source for my personal portfolio: **https://desmond-obaita/portfolio.github.io**
 
 I'm a chemical engineer and Ph.D. candidate at Oregon State University working on
 process modeling and microscale process intensification.
