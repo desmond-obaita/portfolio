@@ -9,4 +9,4 @@ two-phase microflow simulator website.
 
 Built by hand with HTML, CSS, and JavaScript, and hosted on GitHub Pages.
 
-**Contact:** obaitadesmond12@gmail.com · [LinkedIn]([https://www.linkedin.com/in/desmond-obaita-027482165/])
+**Contact:** obaitadesmond12@gmail.com · [LinkedIn]: **[https://www.linkedin.com/in/desmond-obaita-027482165/]**
