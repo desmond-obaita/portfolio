@@ -16,7 +16,7 @@
     <a class="brand" href="../index.html">Desmond Obaita <span>/ ChemE</span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav class="nav" id="nav" aria-label="Main">
-      <a href="../index.html#about">Who I am</a>
+      <a href="../index.html#about">About me</a>
       <a href="../index.html#work">Projects</a>
       <a href="../index.html#strengths">Strengths</a>
       <a href="../index.html#contact">Contact</a>
@@ -25,38 +25,65 @@
   </div>
 </header>
 <main>
+
 <section class="case-hero">
   <div class="wrap">
     <a class="back" href="../index.html#work">← All projects</a>
-    <div class="tags" style="margin-top:1rem"><span class="tag aq">Process intensification</span><span class="tag ">Two‑phase CFD</span><span class="tag ">3D printing</span><span class="tag or">Lithium recovery</span></div>
-    <h1>Separating liquids with geometry, not membranes</h1>
-    <p class="lede">My dissertation tests a simple idea: if you shape a channel and its surfaces just right, two immiscible liquids will sort themselves out, with no membrane, no surfactant, and no moving parts.</p>
-    <dl class="facts"><div><dt>Role</dt><dd>Ph.D. researcher</dd></div><div><dt>Where</dt><dd>ATAMI, Oregon State</dd></div><div><dt>Advisor</dt><dd>Prof. Goran Jovanovic</dd></div><div><dt>Tools</dt><dd>COMSOL, CAD, FFF printing</dd></div></dl>
+    <div class="tags" style="margin-top:1rem"><span class="tag aq">Process intensification</span><span class="tag">Two‑phase CFD</span><span class="tag">3D printing</span><span class="tag or">Lithium recovery</span></div>
+
+    <div class="case-hero-grid">
+      <div>
+        <h1>Separating Liquids With Geometry, Not Membranes</h1>
+        <p class="lede">My dissertation tests a simple idea: if you shape a channel and its surfaces just right, two immiscible liquids will sort themselves out, with no membrane, no surfactant, and no moving parts.</p>
+        <dl class="facts"><div><dt>Role</dt><dd>Graduate Researcher</dd></div><div><dt>Where</dt><dd>ATAMI, Oregon State University</dd></div><div><dt>Advisor</dt><dd>Prof. Goran Jovanovic</dd></div><div><dt>Tools</dt><dd>COMSOL, Fusion 360, FFF printing</dd></div></dl>
+      </div>
+
+      <figure class="case-hero-fig">
+        <img src="../assets/img/sloped_pin_plate.jpg" alt="3D-printed sloped pin plate separator with a clear lid and a hexagonal pin array, resting on a print bed.">
+        <figcaption>My 3D‑printed sloped pin plate, where geometry gradients do the separating.</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
+
 <section class="case-body">
   <div class="wrap">
-    <aside aria-label="On this page"><a href="#problem">The problem</a><a href="#idea">The idea</a><a href="#did">What I did</a><a href="#why">Why it matters</a><a href="#learned">What I learned</a></aside>
+    <aside aria-label="On this page"><a href="#problem">The Problem</a><a href="#idea">The Idea</a><a href="#did">What I Did</a><a href="#numerics">Making The Simulation Work</a><a href="#snippet">Simulation Snippet</a><a href="#why">Why It Matters</a><a href="#learned">What I Learned</a></aside>
     <article>
-<h2 id="problem">The problem</h2>
-<p>Separating oil from water, or an organic solvent from an aqueous stream, is everywhere in chemical processing, from solvent extraction to recovering lithium from produced water. Conventional separators rely on gravity settling, centrifuges, or membranes. They work, but they are large, slow, or prone to fouling.</p>
+<h2 id="problem">The Problem</h2>
+<p>Separating oil from water, or an organic solvent from an aqueous stream, is everywhere in chemical processing, from solvent extraction to recovering lithium from produced water. Conventional separators rely on gravity settling, centrifuges, or membranes. They work, but depending on the method, they can be large, slow, energy‑intensive, and costly to run, and membranes in particular need frequent maintenance because they foul.</p>
 <p>At the microscale, gravity hardly matters and surface forces take over. That opens a door: instead of fighting surface tension, can we design with it?</p>
-<h2 id="idea">The idea</h2>
+<h2 id="idea">The Idea</h2>
 <p>I study what I call gradient distribution: continuously varying the channel geometry, surface wettability (contact angle), or operating conditions across a device so that capillary pressure pushes each phase in a different direction.</p>
 <div class="pullout"><p>A droplet in a narrowing gap feels a pressure difference across it. Arrange those gaps on purpose, and the device itself becomes the separator.</p></div>
-<p>The central device is a <strong>sloped pin plate</strong>: a 3D‑printed PETG base with rows of pins whose diameters step down from 5.0 mm to 3.2 mm across the width, capped with a clear polycarbonate lid so the flow can be filmed. Gaps between pins range from about 500 to 2,100 µm. The organic phase migrates toward the wide‑gap side, the aqueous phase toward the narrow‑gap side, and each leaves through its own outlet.</p>
+<p>The central device is a <strong>sloped pin plate</strong>: a 3D‑printed PETG base with with rows of pins whose diameters decrease across the width while the channel height increases, capped with a clear polycarbonate lid so the flow can be filmed. Gaps between pins range from about 500 to 2,100 µm. The organic phase migrates toward the wide‑gap side, the aqueous phase toward the narrow‑gap side, and each leaves through its own outlet.</p>
 <h2 id="did">What I did</h2>
 <ul>
 <li><strong>Built the physics.</strong> Coupled Navier–Stokes and phase‑field simulations in COMSOL to track droplets as they move through gradient channels, and developed contour‑based maps of separation time and capillary pressure to find the geometric regimes that work best.</li>
 <li><strong>Turned it into a framework.</strong> I’m writing up the approach as the Geometry‑Induced Gradient Distribution (GIGD) framework for passive transport control in microscale multiphase systems.</li>
 <li><strong>Optimized the design.</strong> Parameterized pin radii and channel heights so an optimizer can push capillary pressure above hydrodynamic pressure across the device.</li>
 <li><strong>Built and tested hardware.</strong> Designed, printed, and tested 15+ prototypes and ran 25+ experiments at flow rates from 2.5 to 20 mL/min.</li>
-<li><strong>Applied it to lithium.</strong> On a DOE‑funded lithium extraction project, a membrane‑less phase separator (MPSE) reached greater than 95% separation efficiency on produced water and synthetic produced water. I met 5+ project milestones, wrote three quarterly technical reports, and presented twice to sponsors and collaborators.</li>
+<li><strong>Tested the base idea on lithium extraction.</strong> A 1D geometry gradient instead of the current 2D design has been applied on a DOE‑funded lithium extraction project and achieved greater than 95% separation efficiency on both produced water and synthetic produced water.</li>
 </ul>
+<h2 id="numerics">Making The Simulation Work</h2>
+<p>Two‑phase simulations are unforgiving: a droplet can vanish, smear out, or stall for numerical reasons that have nothing to do with the physics. Getting reliable results took as much careful setup as the physics itself.</p>
+<ul>
+  <li><strong>Meshing.</strong> Built a user-controlled 3D mesh and refined it where the pins and narrow gaps sit so the interface stays sharp as droplets squeeze through.</li>
+  <li><strong>Interface settings.</strong> Tuned the phase‑field interface thickness and mobility so the droplet keeps its shape across the full channel instead of dissolving partway through.</li>
+  <li><strong>Inlet design.</strong> Instead of placing a droplet by hand, used a smooth step function at the inlet to switch from the dispersed phase to the continuous phase, so droplets form naturally.</li>
+  <li><strong>Solver settings.</strong> Adjusted time‑stepping, tolerances, and segregated solver steps to improve convergence and keep long runs stable.</li>
+  </ul>
+
+<h2 id="snippet">Simulation Snippet</h2>
+<figure>
+  <img src="../assets/img/droplet_gif.gif" alt="COMSOL simulation of droplets separating as they move through the gradient channel.">
+  <figcaption>Two-phase phase-field simulation in COMSOL: droplets migrate toward their outlets as channel geometry changes.</figcaption>
+</figure>
+
 <h2 id="why">Why it matters</h2>
-<p>Low‑cost 3D printing plus passive separation means compact, modular separators that are cheaper to make than machined or laser‑cut microdevices and need no surfactants that might contaminate the product. That matters for solvent extraction, water treatment, and critical‑mineral recovery, where the economics of each extra unit operation add up fast.</p>
+<p>Low‑cost 3D printing plus passive separation means compact, modular separators that are cheaper to build than large membrane‑based units or machined and laser‑cut microdevices. They also need no surfactants, so there’s nothing extra to contaminate the product. That matters for solvent extraction, water treatment, and critical‑mineral recovery, where the cost of every extra unit operation adds up fast.</p>
 <h2 id="learned">What I learned</h2>
-<p>Simulations of interfaces are unforgiving. Getting a droplet to survive its trip through a gradient channel meant working systematically through interface thickness, mesh resolution, inlet velocity, contact angle, and phase‑field mobility until the physics, not the numerics, controlled the result. That patience transfers directly to troubleshooting a real process.</p>
+<p>Patience and a systematic approach beat guesswork. That lesson carries straight over to troubleshooting a real process.</p>
     </article>
   </div>
 </section>
@@ -67,7 +94,7 @@
   </div>
 </section>
 </main>
-<footer class="site-footer"><div class="wrap">© 2026 Desmond Obaita. Built by hand and hosted on GitHub Pages.</div></footer>
+<footer class="site-footer"><div class="wrap">© 2026 Desmond Obaita. Built and Designed by hand and hosted on GitHub Pages.</div></footer>
 <script src="../assets/js/site.js"></script>
 </body>
 </html>
