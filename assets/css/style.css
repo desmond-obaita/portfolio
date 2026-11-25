@@ -344,3 +344,8 @@ img.portrait {
   .case-body figure img,
   .team-photo img { max-height: 320px; object-fit: cover; }
 }
+
+/* Phones: keep the hero photo compact */
+@media (max-width: 820px) {
+  .channel img { max-height: 240px; }
+}
