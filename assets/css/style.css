@@ -318,3 +318,15 @@ img.portrait {
 /* Team photo at the end of the Duranium case study */
 .team-photo { margin: 2.5rem 0 0; max-width: 760px; scroll-margin-top: 90px; }
 .team-photo img { width: 100%; border-radius: 14px; border: 1px solid var(--line); }
+
+/* Feedback form */
+.feedback-form { display: grid; gap: 0.5rem; max-width: 560px; margin-top: 1.25rem; }
+.feedback-form label { font-family: var(--sans); font-size: 0.9rem; font-weight: 600; margin-top: 0.5rem; }
+.feedback-form .optional { font-weight: 400; color: var(--ink-soft); }
+.feedback-form input, .feedback-form textarea {
+  font: inherit; font-size: 1rem; padding: 0.7rem 0.85rem;
+  border: 1.5px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink);
+}
+.feedback-form input:focus, .feedback-form textarea:focus { outline: 3px solid var(--organic); outline-offset: 1px; border-color: var(--ink); }
+.feedback-form button { justify-self: start; margin-top: 0.75rem; cursor: pointer; }
+#feedback { scroll-margin-top: 90px; }

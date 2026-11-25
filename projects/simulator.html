@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Two‑phase microflow simulator — Desmond Obaita</title>
+  <title>Two‑Phase Microflow Simulator — Desmond Obaita</title>
   <meta name="description" content="An interactive browser tool by Desmond Obaita for exploring two-phase flow in microchannels.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,29 +28,58 @@
 <section class="case-hero">
   <div class="wrap">
     <a class="back" href="../index.html#work">← All projects</a>
-    <div class="tags" style="margin-top:1rem"><span class="tag aq">Interactive</span><span class="tag ">JavaScript</span><span class="tag or">Science communication</span></div>
-    <h1>Two‑phase microflow simulator</h1>
+    <div class="tags" style="margin-top:1rem"><span class="tag aq">Interactive</span><span class="tag ">Phase‑Field CFD</span><span class="tag or">Science Communication</span><span class="tag or">Numerical Validation</span></div>
+    <h1>Two‑Phase Microflow Simulator</h1>
     <p class="lede">Most of my research lives inside software few people have installed. I built this simulator so recruiters, classmates, and curious engineers can get a feel for microscale two‑phase flow in a browser.</p>
-    <dl class="facts"><div><dt>Role</dt><dd>Designer and developer</dd></div><div><dt>Type</dt><dd>Web app</dd></div><div><dt>Hosted on</dt><dd>GitHub Pages</dd></div><div><dt>Status</dt><dd>Live</dd></div></dl>
+    <dl class="facts">
+    <div><dt>Role</dt><dd>Creator &amp; Technical Lead</dd></div>
+    <div><dt>Type</dt><dd>Browser‑based CFD tool</dd></div>
+    <div><dt>Built with</dt><dd>JavaScript, AI‑assisted development</dd></div>
+    <div><dt>Status</dt><dd>Live, in active development</dd></div>
+    </dl>
   </div>
 </section>
 <section class="case-body">
   <div class="wrap">
-    <aside aria-label="On this page"><a href="#try">Try it</a><a href="#why">Why I built it</a><a href="#how">How it works</a><a href="#learned">What I learned</a></aside>
+    <aside aria-label="On this page"><a href="#try">Try It</a><a href="#why">Why I Built It</a><a href="#how">How It Works</a><a href="#learned">What I Learned</a><a href="#feedback">Share Your Feedback</a></aside>
     <article>
-<h2 id="try">Try it</h2>
-<!-- EDIT: replace with your live simulator URL -->
-<p><a class="btn primary" href="https://YOUR-GITHUB-USERNAME.github.io/two-phase-simulator/">Open the simulator</a></p>
+<h2 id="try">Try It</h2>
+
+<p>
+  <a class="btn primary" href="https://desmond-obaita.github.io/microflow-simulator/">Open the simulator</a>
+  <a class="btn" href="https://github.com/desmond-obaita/microflow-simulator">View the code on GitHub</a>
+</p>
 <p>It runs entirely in the browser, with nothing to install.</p>
-<h2 id="why">Why I built it</h2>
-<p>Phase‑field simulations in COMSOL are powerful but slow and hard to share. I wanted a lightweight way to show the core idea of my research, that geometry and wettability can steer droplets, to people who don’t run CFD for a living.</p>
-<h2 id="how">How it works</h2>
-<!-- EDIT: describe the actual inputs, physics, and outputs of your simulator here -->
-<p>Users adjust inputs and watch the flow respond in real time. Under the hood, the simulator uses simplified physics drawn from the same principles as my dissertation models: capillary pressure, wettability, and viscous flow in confined channels.</p>
+
+<h2 id="why">Why I Built It</h2>
+<p>Phase‑field simulation software is powerful, but it’s hard to get your hands on. The leading tools are expensive or require an institutional license, and the free ones usually assume programming experience, so the learning curve is steep. I wanted a lightweight way to show the core idea of my research, that geometry and wettability can steer droplets, to people who don’t run CFD for a living.</p>
+<h2 id="how">How It Works</h2>
+<p>Users set up a 2D microchannel in the browser: geometry and mesh, inlets and outlets, fluid properties (water and cyclohexane by default), and wall wettability, including a contact angle that can vary along each wall, which is the same idea as my dissertation’s gradient channels. Then they watch the interface, velocity, and pressure fields evolve in real time.</p>
+<p>Under the hood, it couples the Cahn–Hilliard phase‑field equation with incompressible Navier–Stokes, using the same formulation as COMSOL’s two‑phase phase‑field interface so the results can be compared directly. Field data can be exported as CSV.</p>
+<p>I validated it against standard benchmark cases: pressure‑driven channel flow, the pressure jump across a static droplet, and droplets resting on surfaces at set contact angles. All matched theory closely.</p>
 <h2 id="learned">What I learned</h2>
-<p>Building an interactive tool forced me to decide which physics really matters to the story and which can be simplified, the same judgment a good process model needs.</p>
+<p>This project became a case of learning by building. To get the simulator right, I had to understand the Cahn–Hilliard and Navier–Stokes equations far more deeply than any software manual had taught me: how the interface forms, how the two fluids are coupled, and how each term shapes the flow. I came away with a much clearer picture of the physics behind my own research.</p>
+<p>It also pulled me into new territory. Working on a website meant learning to read and edit HTML, CSS, and JavaScript, which I’m still building on. Most of all, it reinforced a habit I bring to every model: understand the physics fully, then check every result against something you know is true</p>
+<h2 id="feedback">Share Your Feedback</h2>
+<p>Have ideas for improving the simulator, spotted a bug, or found something hard to use or read? I’d love to hear from you.</p>
+
+<form class="feedback-form" action="https://formspree.io/f/xgakppop" method="POST">
+  <label for="fb-name">Name</label>
+  <input id="fb-name" type="text" name="name" required>
+
+  <label for="fb-email">Email <span class="optional">(optional, if you’d like a reply)</span></label>
+  <input id="fb-email" type="email" name="email">
+
+  <label for="fb-message">Message</label>
+  <textarea id="fb-message" name="message" rows="5" required></textarea>
+
+  <button class="btn primary" type="submit">Send feedback</button>
+</form>
     </article>
   </div>
+
+
+
 </section>
 <section class="next-case">
   <div class="wrap">
@@ -59,7 +88,7 @@
   </div>
 </section>
 </main>
-<footer class="site-footer"><div class="wrap">© 2026 Desmond Obaita. Built by hand and hosted on GitHub Pages.</div></footer>
+<footer class="site-footer"><div class="wrap">© 2026 Desmond Obaita. Hosted on GitHub Pages.</div></footer>
 <script src="../assets/js/site.js"></script>
 </body>
 </html>

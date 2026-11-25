@@ -28,34 +28,51 @@
 <section class="case-hero">
   <div class="wrap">
     <a class="back" href="../index.html#work">← All projects</a>
-    <div class="tags" style="margin-top:1rem"><span class="tag or">Alcohol‑to‑jet</span><span class="tag ">Reactor modeling</span><span class="tag aq">Optimization</span><span class="tag ">Scale‑up</span></div>
-    <h1>Microchannel reactors for sustainable aviation fuel</h1>
-    <p class="lede">Turning renewable ethanol into jet fuel runs through butene. I helped model the 3D‑printed microchannel reactors that make that step compact, modular, and ready to number up.</p>
-    <dl class="facts"><div><dt>Role</dt><dd>Reactor modeling</dd></div><div><dt>Partners</dt><dd>PNNL &amp; LanzaTech</dd></div><div><dt>Where</dt><dd>ATAMI, Oregon State</dd></div><div><dt>Tools</dt><dd>COMSOL, MATLAB/Simulink</dd></div></dl>
-  </div>
+    <div class="tags" style="margin-top:1rem"><span class="tag or">Alcohol‑to‑jet</span><span class="tag ">Reactor Modeling</span><span class="tag aq">Optimization</span><span class="tag ">Scale‑up</span></div>
+    <h1>Microchannel Reactors For Sustainable Aviation Fuel</h1>
+    <p class="lede"><em>n</em>‑Butene is a building block that can be upgraded into jet fuel, and making it directly from renewable ethanol is a newer, more efficient route. I was part of a team modeling the microchannel reactors that make that step compact, modular, and ready to scale.</p>
+<dl class="facts">
+  <div><dt>Role</dt><dd>Graduate Researcher, Modeling Team</dd></div>
+  <div><dt>Partner</dt><dd>PNNL</dd></div>
+  <div><dt>Where</dt><dd>ATAMI, Oregon State University</dd></div>
+  <div><dt>Tools</dt><dd>COMSOL, MATLAB/Simulink, Excel </dd></div>
+</dl>
+</div>
 </section>
 <section class="case-body">
   <div class="wrap">
-    <aside aria-label="On this page"><a href="#problem">The problem</a><a href="#did">What I did</a><a href="#result">The result</a><a href="#learned">What I learned</a></aside>
+    <aside aria-label="On this page"><a href="#problem">The Problem</a><a href="#approach">Our Approach</a><a href="#contributions">My Contributions</a><a href="#result">The Results</a><a href="#learned">What I Learned</a></aside>
     <article>
-<h2 id="problem">The problem</h2>
-<p>Sustainable aviation fuel can be made from ethanol, and converting ethanol to butene is a key intermediate step on that route. Microchannel reactors promise much better heat and mass transfer than conventional reactors, and additive manufacturing makes it possible to scale them by adding more identical units rather than building one giant vessel.</p>
-<p>To design those reactors well, the team needed a model that could predict conversion and selectivity across operating conditions and geometries.</p>
-<h2 id="did">What I did</h2>
-<p>I developed a first‑principles multiphysics model in COMSOL coupling Laminar Flow, Heat Transfer in Fluids, and Transport of Diluted Species with Arrhenius‑based reaction kinetics. I compared reactor geometries across four operating conditions and validated the model against experimental data using temperature sweeps, Arrhenius trend analysis, and selectivity comparisons.</p>
-<p>Because many kinetic parameters interact, manual tuning was slow. So I built an automated calibration loop:</p>
+
+<h2 id="problem">The Problem</h2>
+<div class="pullout"><p><strong>A note on confidentiality:</strong> This page focuses on the modeling approach and my contributions. Research data, reactor designs, kinetic parameters, and performance results are not shown because they are our research partner's intellectual property.</p></div>
+
+<p>Sustainable aviation fuel can be made from renewable ethanol. Conventional routes take several steps, but a newer catalytic route converts ethanol directly into butene, a building block that can then be upgraded into jet‑range fuel.</p>
+<p>Microchannel reactors are a natural fit for this step. Their tiny channels move heat and mass far more efficiently than conventional reactors, and because they can be 3D‑printed, they scale by adding more identical units instead of building one giant vessel. To design them well, the team needed a model that could predict reactor performance across different geometries and operating conditions.</p>
+
+<h2 id="approach">Our Approach</h2>
+<p>Our team built a first‑principles multiphysics model in COMSOL, coupling fluid flow, heat transfer, and species transport with the reaction kinetics. The model was checked against experimental data from our partners using temperature sweeps, Arrhenius trend analysis, and comparisons of product selectivity.</p>
+<p>Because many kinetic parameters interact, tuning them by hand was slow. So the team linked COMSOL to MATLAB in an automated calibration loop:</p>
 <ol class="loop">
-<li>Solve the reactor model in COMSOL.</li>
-<li>Export conversion and selectivity to MATLAB.</li>
-<li>Score the mismatch against experimental data.</li>
-<li>Let the optimizer propose new parameters.</li>
-<li>Send them back to COMSOL and repeat until the error tolerance is met.</li>
+  <li>Solve the reactor model in COMSOL.</li>
+  <li>Export the predicted conversion and selectivity to MATLAB.</li>
+  <li>Score the mismatch against experimental data.</li>
+  <li>Let the optimizer propose new parameters.</li>
+  <li>Send them back to COMSOL and repeat until the error is small enough.</li>
 </ol>
-<h2 id="result">The result</h2>
-<p>The calibrated model matched experimental behavior across relevant operating conditions and became a design tool rather than just an analysis tool, able to predict how new geometries and conditions would perform.</p>
-<div class="pullout"><p>The work contributes to <em>“Translating Bench Catalysis to Modular Production via Additively Manufactured Microchannel Reactors: A 600× Numbering‑Up Case Study of Ethanol‑to‑Butene Conversion,”</em> currently in review at <em>Nature Energy</em>.</p></div>
-<h2 id="learned">What I learned</h2>
-<p>Our lab works in three design phases: design for functionality, design for manufacturing, and design for market. A trustworthy model lets you move between them quickly, and that is what makes it valuable to engineers, fabricators, and the people running the techno‑economics.</p>
+<h2 id="contributions">My Contributions</h2>
+<ul>
+  <li>Modeled and compared reactor geometries across operating conditions to support reactor design and catalyst development.</li>
+  <li>Developed a structured way to compare model predictions with new experimental data and trace where differences came from.</li>
+  <li>Adjusted the optimizer’s search limits so the model could recalibrate to new data while staying true to its first‑principles basis.</li>
+</ul>
+
+<h2 id="result">The Results</h2>
+<p>The calibrated model matched experimental trends across the relevant operating conditions and moved from an analysis tool to a design tool, able to predict how new geometries and conditions would perform.</p>
+<div class="pullout"><p>The work contributes to <em>“Translating Bench Catalysis to Modular Production via Additively Manufactured Microchannel Reactors: A 600× Numbering‑Up Case Study of Ethanol‑to‑Butene Conversion,”</em> currently in review at <em>Nature Energy</em>, on which I am a co‑author.</p></div>
+
+<h2 id="learned">What I Learned</h2>
+<p>Our lab designs in three phases: design for functionality, design for manufacturing, and design for market. A model you can trust lets a team move between those phases quickly, and working in a large collaboration showed me how much that trust depends on clear methods, careful validation, and good communication between modelers and experimentalists.</p>
     </article>
   </div>
 </section>
@@ -66,7 +83,7 @@
   </div>
 </section>
 </main>
-<footer class="site-footer"><div class="wrap">© 2026 Desmond Obaita. Built by hand and hosted on GitHub Pages.</div></footer>
+<footer class="site-footer"><div class="wrap">© 2026 Desmond Obaita. Hosted on GitHub Pages.</div></footer>
 <script src="../assets/js/site.js"></script>
 </body>
 </html>
